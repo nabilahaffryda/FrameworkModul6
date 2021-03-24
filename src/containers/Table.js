@@ -37,13 +37,10 @@ class Table extends Component {
                                         {todo.text} {todo.completed === true ? "(completed)" : ""}
                                     </td>
                                     <td>
-                                        <span className="fas fa-minus-circle" onClick={() => this.props.deleteTodo(todo.id)}
-                                            style={{
-                                                color: "white",
-                                                fontSize: "20pt",
-                                                marginRight: "20px" }}/>
-                                        <span className="fas fa-check-circle" onClick={() => this.props.toggleTodo(todo.id)}
-                                            style={{ color: "white", fontSize: "20pt" }}/>
+                                        <button type="button" className="btn btn-danger" onClick={() => this.props.deleteTodo(todo.id)}
+                                            style={{marginTop: "10px"}}>Delete</button> &nbsp;
+                                        <button type="button" className="btn btn-success" onClick={() => this.props.toggleTodo(todo.id)}
+                                            style={{marginTop: "10px"}}>Check</button> 
                                     </td>
                                 </tr>
                             ))}
